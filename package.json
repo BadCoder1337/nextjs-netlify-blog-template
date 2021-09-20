@@ -15,7 +15,6 @@
         "@mapbox/rehype-prism": "^0.7.0",
         "@n8tb1t/use-scroll-position": "^2.0.3",
         "@svgr/webpack": "^5.5.0",
-        "@types/js-yaml": "^4.0.3",
         "autoprefixer": "^10.3.4",
         "date-fns": "^2.24.0",
         "gray-matter": "^4.0.3",
@@ -35,6 +34,7 @@
     },
     "devDependencies": {
         "@types/jest": "^26.0.24",
+        "@types/js-yaml": "^4.0.3",
         "@types/node": "^16.9.4",
         "@types/react": "^17.0.22",
         "@types/tailwindcss": "^2.2.1",

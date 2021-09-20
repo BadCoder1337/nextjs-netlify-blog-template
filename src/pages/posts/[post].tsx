@@ -1,17 +1,15 @@
-import { GetStaticProps, GetStaticPaths } from "next";
-import renderToString from "next-mdx-remote/render-to-string";
-import { MdxRemote } from "next-mdx-remote/types";
-import hydrate from "next-mdx-remote/hydrate";
-import matter from "gray-matter";
-import { fetchPostContent } from "../../lib/posts";
-import fs from "fs";
-import yaml from "js-yaml";
 import { parseISO } from 'date-fns';
-import PostLayout from "../../components/PostLayout";
-
+import fs from "fs";
+import matter from "gray-matter";
+import yaml from "js-yaml";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import InstagramEmbed from "react-instagram-embed";
-import YouTube from "react-youtube";
 import { TwitterTweetEmbed } from "react-twitter-embed";
+import YouTube from "react-youtube";
+import PostLayout from "../../components/PostLayout";
+import { fetchPostContent } from "../../lib/posts";
 
 export type Props = {
   title: string;
@@ -20,7 +18,7 @@ export type Props = {
   tags: string[];
   author: string;
   description?: string;
-  source: MdxRemote.Source;
+  source: MDXRemoteSerializeResult;
 };
 
 const components = { InstagramEmbed, YouTube, TwitterTweetEmbed };
@@ -39,7 +37,6 @@ export default function Post({
   description = "",
   source,
 }: Props) {
-  const content = hydrate(source, { components })
   return (
     <PostLayout
       title={title}
@@ -49,7 +46,7 @@ export default function Post({
       author={author}
       description={description}
     >
-      {content}
+      <MDXRemote {...source} components={components} />
     </PostLayout>
   )
 }
@@ -68,7 +65,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { content, data } = matter(source, {
     engines: { yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object }
   });
-  const mdxSource = await renderToString(content, { components, scope: data });
+  const mdxSource = await serialize(content, { scope: data });
   return {
     props: {
       title: data.title,
