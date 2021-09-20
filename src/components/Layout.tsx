@@ -1,12 +1,32 @@
 import Head from "next/head";
+import tw from "tailwind-styled-components";
 import Navigation from "./Navigation";
+
+const LayoutContainer = tw.div`
+  min-h-screen
+  h-full
+  text-white
+  bg-operators-art
+  bg-cover
+  bg-center
+  leading-normal
+  tracking-normal
+  font-main
+  flex
+  flex-col
+`
+
+const Main = tw.main`
+  flex
+  min-h-full
+`
 
 type Props = {
   children: React.ReactNode;
 };
 export default function Layout({ children }: Props) {
   return (
-    <div className="root">
+    <LayoutContainer>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -14,33 +34,8 @@ export default function Layout({ children }: Props) {
         <link rel="apple-touch-icon" href="/icon.png" />
         <meta name="theme-color" content="#fff" />
       </Head>
-      <nav>
-        <Navigation />
-      </nav>
-      <main>{children}</main>
-      <style jsx>
-        {`
-          .root {
-            display: block;
-            padding: 4rem 0;
-            box-sizing: border-box;
-            height: 100%;
-          }
-          main {
-            display: flex;
-            min-height: 100%;
-          }
-          @media (min-width: 769px) {
-            .root {
-              display: flex;
-              flex: 1 0 auto;
-            }
-            main {
-              flex: 1 0 auto;
-            }
-          }
-        `}
-      </style>
-    </div>
+      <Navigation />
+      <Main>{children}</Main>
+    </LayoutContainer>
   );
 }

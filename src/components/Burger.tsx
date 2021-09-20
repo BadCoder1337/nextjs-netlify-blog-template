@@ -1,3 +1,9 @@
+import tw from "tailwind-styled-components";
+
+const BurgerContainer = tw.div<{ active: boolean }>`
+  ${p => p.active ? "" : ""}
+`
+
 type Props = {
   active: boolean;
   onClick: () => void;
@@ -11,7 +17,6 @@ export default function Burger({ active, onClick }: Props) {
       <style jsx>
         {`
           .container {
-            position: fixed;
             width: 38px;
             height: 38px;
             cursor: pointer;
@@ -21,7 +26,6 @@ export default function Burger({ active, onClick }: Props) {
             background-color: rgba(255, 255, 255, 0.7);
           }
           .meat {
-            position: absolute;
             width: 28px;
             height: 2px;
             background: #222;
