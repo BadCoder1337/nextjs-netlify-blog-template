@@ -10,7 +10,7 @@ export default function Index() {
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
-      <div className="container">
+      <div className="container text-shadow-xl">
         <div>
           <h1>
             Привет, мы Rainbow6-RUSSIA.
