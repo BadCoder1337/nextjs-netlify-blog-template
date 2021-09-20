@@ -6,11 +6,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        "operators-art": "url('/operators-art.jpg')"
+        "operators-art": "url('/images/siege-bar.jpg')"
       }),
       fontFamily: {
         "headline": ["Montserrat", "sans-serif"],
-        "main": ["Open Sans", "sans-serif"]
+        "main": ["Raleway", "sans-serif"]
       }
     },
     screens: {

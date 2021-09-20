@@ -1431,6 +1431,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@headlessui/react@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "@headlessui/react@npm:1.4.1"
+  peerDependencies:
+    react: ^16 || ^17 || ^18
+    react-dom: ^16 || ^17 || ^18
+  checksum: e036941e31b02a17e8c27b018d40cced1e7165ec85ce00cddf74884349e86cb7ef75e3c645d7d0f133f63dfbac97ad4a5765d996db3b8f3cc4a678c84402ad6e
+  languageName: node
+  linkType: hard
+
+"@heroicons/react@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@heroicons/react@npm:1.0.4"
+  peerDependencies:
+    react: ">= 16"
+  checksum: 08f2853a49e51f274f22e8e1bb4e7d8a49456b7eb770447da66fd06ac05bf821ddf5d93170088d61ec44ae66cfbdc877c287861d5a3d22aad1785659502e3a71
+  languageName: node
+  linkType: hard
+
 "@istanbuljs/load-nyc-config@npm:^1.0.0":
   version: 1.1.0
   resolution: "@istanbuljs/load-nyc-config@npm:1.1.0"
@@ -1697,6 +1716,16 @@ __metadata:
   version: 1.6.22
   resolution: "@mdx-js/util@npm:1.6.22"
   checksum: 4b393907e39a1a75214f0314bf72a0adfa5e5adffd050dd5efe9c055b8549481a3cfc9f308c16dfb33311daf3ff63added7d5fd1fe52db614c004f886e0e559a
+  languageName: node
+  linkType: hard
+
+"@n8tb1t/use-scroll-position@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "@n8tb1t/use-scroll-position@npm:2.0.3"
+  peerDependencies:
+    "@types/react": "*"
+    react: "*"
+  checksum: d007a7cf129019f6b537248f5eb3c44c1aa731c6db839e44f5e40c67ff54693ea0583e680b041bef740d94cd3b165db688faad9ec8efb1979c8b9186431cf55c
   languageName: node
   linkType: hard
 
@@ -8480,7 +8509,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "rainbow6ru-blog@workspace:."
   dependencies:
+    "@headlessui/react": ^1.4.1
+    "@heroicons/react": ^1.0.4
     "@mapbox/rehype-prism": ^0.7.0
+    "@n8tb1t/use-scroll-position": ^2.0.3
     "@svgr/webpack": ^5.5.0
     "@types/jest": ^26.0.24
     "@types/js-yaml": ^4.0.3

@@ -10,7 +10,10 @@
         "test": "jest"
     },
     "dependencies": {
+        "@headlessui/react": "^1.4.1",
+        "@heroicons/react": "^1.0.4",
         "@mapbox/rehype-prism": "^0.7.0",
+        "@n8tb1t/use-scroll-position": "^2.0.3",
         "@svgr/webpack": "^5.5.0",
         "@types/js-yaml": "^4.0.3",
         "autoprefixer": "^10.3.4",

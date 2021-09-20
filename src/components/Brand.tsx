@@ -10,7 +10,9 @@ const BrandContainer = tw.a`
     hover:text-white
     hover:no-underline
     flex
-    font-bold
+    font-extrabold
+    flex-shrink-0
+    cursor-pointer
 `
 
 export default function Brand() {
