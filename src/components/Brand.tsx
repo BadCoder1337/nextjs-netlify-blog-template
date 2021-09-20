@@ -1,27 +1,24 @@
 import Link from "next/link";
 import tw from "tailwind-styled-components";
-import Logo from "../../public/images/logo.svg";
+import logo from "../../public/images/logo.png";
 
-const BrandContainer = tw.div`
+const BrandContainer = tw.a`
     py-2
     px-4
-    flex
-`
-
-const A = tw.a`
     text-white
     no-underline
     hover:text-white
     hover:no-underline
+    flex
+    font-bold
 `
 
 export default function Brand() {
-    return <BrandContainer>
-        <Link href="/">
-            <A>
-                {Logo}
-                <span className="text-2xl pl-2 whitespace-nowrap">Rainbow6-RUSSIA</span>
-            </A>
-        </Link>
-    </BrandContainer>
+    return <Link href="/">
+        <BrandContainer>
+            <img className="inline" src={logo.src} width={48} height={48} />
+            <span className="text-2xl pl-2 py-2 whitespace-nowrap">Rainbow6-RUSSIA</span>
+        </BrandContainer>
+    </Link>
+
 }
