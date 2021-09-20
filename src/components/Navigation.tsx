@@ -16,6 +16,7 @@ const Navbar = tw.nav<{ $top: boolean }>`
     fixed
     flex
     transition
+    text-shadow-xl
 `
 
 export default function Navigation() {
