@@ -1,19 +1,14 @@
 {
-  "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Next.js Netlify Blog",
-  "site_description": "Next.js blog template for Netlify",
+  "base_url": "https://rainbow6.ru",
+  "site_title": "Rainbow6-RUSSIA",
+  "site_description": "Largest in CIS Rainbow Six Siege and Extraction Discord community",
   "site_keywords": [
-    {
-      "keyword": "Next.js"
-    },
-    {
-      "keyword": "Netlify"
-    },
-    {
-      "keyword": "React"
-    }
+    "Rainbow Six Siege",
+    "Rainbow Six Extraction",
+    "Looking for group",
+    "Discord community"
   ],
   "posts_per_page": 5,
-  "twitter_account": "@my-account",
-  "github_account": "wutali"
+  "twitter_account": "Satanicat47",
+  "github_account": "Rainbow6-RUSSIA"
 }
