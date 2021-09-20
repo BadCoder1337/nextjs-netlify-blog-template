@@ -3,12 +3,12 @@ import Twitter from "../assets/twitter-alt.svg";
 import GitHub from "../assets/github-alt.svg";
 import config from "../lib/config";
 
-export function SocialList({}) {
+export function SocialList({ }) {
   return (
     <div>
       <a
-        title="Twitter"
-        href={`https://twitter.com/${config.twitter_account}`}
+        title="VK"
+        href={`https://vk.com/${config.vk_account}`}
         target="_blank"
         rel="noopener"
       >
