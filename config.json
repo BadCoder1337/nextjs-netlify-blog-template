@@ -1,14 +1,14 @@
 {
-  "base_url": "https://rainbow6.ru",
-  "site_title": "Rainbow6-RUSSIA",
-  "site_description": "Largest in CIS Rainbow Six Siege and Extraction Discord community",
-  "site_keywords": [
-    "Rainbow Six Siege",
-    "Rainbow Six Extraction",
-    "Looking for group",
-    "Discord community"
-  ],
-  "posts_per_page": 5,
-  "twitter_account": "Satanicat47",
-  "github_account": "Rainbow6-RUSSIA"
+    "base_url": "https://rainbow6.ru",
+    "site_title": "Rainbow6-RUSSIA",
+    "site_description": "Largest in CIS Rainbow Six Siege and Extraction Discord community",
+    "site_keywords": [
+        "Rainbow Six Siege",
+        "Rainbow Six Extraction",
+        "Looking for group",
+        "Discord community"
+    ],
+    "posts_per_page": 5,
+    "vk_account": "rainbow6_ru",
+    "github_account": "Rainbow6-RUSSIA"
 }
