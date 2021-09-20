@@ -1,12 +1,15 @@
 {
     "base_url": "https://rainbow6.ru",
     "site_title": "Rainbow6-RUSSIA",
-    "site_description": "Largest in CIS Rainbow Six Siege and Extraction Discord community",
+    "site_description": "Cамое большое и уютное русскоязычное сообщество по Rainbow Six Siege и Extraction. https://discord.gg/r6ru",
     "site_keywords": [
         "Rainbow Six Siege",
+        "Rainbow Six Осада",
         "Rainbow Six Extraction",
-        "Looking for group",
-        "Discord community"
+        "Rainbow Six Эвакуация",
+        "Поиск команды",
+        "Discord",
+        "Discord сообщество"
     ],
     "posts_per_page": 5,
     "vk_account": "rainbow6_ru",
