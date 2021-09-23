@@ -5,9 +5,6 @@ module.exports = {
   darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
-      backgroundImage: theme => ({
-        "operators-art": "url('/images/siege-bar.jpg')"
-      }),
       fontFamily: {
         "headline": ["Montserrat", "sans-serif"],
         "main": ["Raleway", "sans-serif"]
