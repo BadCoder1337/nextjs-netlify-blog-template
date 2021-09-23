@@ -5,7 +5,7 @@ import Navigation from "./Navigation";
 const LayoutContainer = tw.div`
   min-h-screen
   text-white
-  bg-gray-900
+  bg-gray-800
   bg-cover
   bg-center
   leading-normal
