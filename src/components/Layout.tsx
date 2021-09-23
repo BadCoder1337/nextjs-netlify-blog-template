@@ -4,9 +4,8 @@ import Navigation from "./Navigation";
 
 const LayoutContainer = tw.div`
   min-h-screen
-  h-full
   text-white
-  bg-operators-art
+  bg-black
   bg-cover
   bg-center
   leading-normal
@@ -18,6 +17,7 @@ const LayoutContainer = tw.div`
 
 const Main = tw.main`
   flex
+  flex-col
   min-h-full
 `
 

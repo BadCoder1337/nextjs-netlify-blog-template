@@ -18,6 +18,7 @@ const Navbar = tw.nav<{ $top: boolean }>`
     transition
     text-shadow-xl
     justify-between
+    z-50
 `
 
 export default function Navigation() {

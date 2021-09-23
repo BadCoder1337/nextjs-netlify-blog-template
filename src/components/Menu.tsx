@@ -5,7 +5,7 @@ import { NewspaperIcon, AtSymbolIcon, CurrencyDollarIcon, InformationCircleIcon 
 const MenuContainer = tw.div<{ $active: boolean }>`
     ${p => p.$active ? "" : "hidden"}
     lg:flex
-    container
+    w-full
     items-center
 `
 const MenuPart = tw.div`
@@ -47,10 +47,10 @@ type Props = {
 export default function Menu({ active }: Props) {
     return <MenuContainer $active={active}>
         <MenuLeft>
-            <Link href="/"><MenuButton><NewspaperIcon width={24} height={24} />Новости</MenuButton></Link>
-            <Link href="/"><MenuButton><CurrencyDollarIcon width={24} height={24} />Поддержать нас</MenuButton></Link>
-            <Link href="/"><MenuButton><AtSymbolIcon width={24} height={24} />Связаться</MenuButton></Link>
-            <Link href="/"><MenuButton><InformationCircleIcon width={24} height={24} />О нас</MenuButton></Link>
+            <Link href="/posts"><MenuButton><NewspaperIcon width={24} height={24} />Новости</MenuButton></Link>
+            <Link href="/donate"><MenuButton><CurrencyDollarIcon width={24} height={24} />Поддержать нас</MenuButton></Link>
+            <Link href="/contact"><MenuButton><AtSymbolIcon width={24} height={24} />Связаться</MenuButton></Link>
+            <Link href="/status"><MenuButton><InformationCircleIcon width={24} height={24} />Статус</MenuButton></Link>
         </MenuLeft>
         <MenuRight>
             <MenuButton target="_blank" href="https://discord.gg/r6ru">Присоединиться</MenuButton>
