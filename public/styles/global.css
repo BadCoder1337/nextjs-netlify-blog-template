@@ -19,7 +19,7 @@ html,
 body {
     font-family: "Montserrat", sans-serif;
     background-color: #fff;
-    color: #222;
+    /* color: #222; */
     font-weight: 200;
     height: 100%;
 }
@@ -29,14 +29,14 @@ body {
 }
 
 a {
-    color: #9b9b9b;
+    /* color: #9b9b9b; */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:active,
 a:hover {
-    color: #000;
+    color: #fffa;
 }
 
 .youtube-container {
@@ -60,12 +60,12 @@ a:hover {
 
 .content {
     font-family: "Montserrat", sans-serif;
-    color: #222;
+    /* color: #222; */
     font-weight: 200;
 }
 
 .content time {
-    color: #9b9b9b;
+    /* color: #9b9b9b; */
 }
 
 .content p {
@@ -95,7 +95,7 @@ a:hover {
     margin-left: -1em;
     font-weight: 300;
     font-size: 1.5rem;
-    color: #9b9b9b;
+    /* color: #9b9b9b; */
     display: none;
     content: "#";
 }

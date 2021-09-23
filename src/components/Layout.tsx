@@ -19,6 +19,7 @@ const Main = tw.main`
   flex
   flex-col
   min-h-full
+  gap-8
 `
 
 type Props = {
