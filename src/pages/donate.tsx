@@ -1,5 +1,4 @@
 import React from "react";
-import ArtLayout from "../components/ArtLayout";
 import Layout from "../components/Layout";
 import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
@@ -7,7 +6,7 @@ import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 
 export default function Donate() {
   return (
-    <ArtLayout>
+    <Layout>
       <BasicMeta url={"/donate"} />
       <OpenGraphMeta url={"/donate"} />
       <TwitterCardMeta url={"/donate"} />
@@ -27,6 +26,6 @@ export default function Donate() {
             height: 100vh;
           }
         `}</style>
-    </ArtLayout>
+    </Layout>
   );
 }

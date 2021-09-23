@@ -5,9 +5,9 @@ import Brand from "./Brand";
 import Menu from './Menu';
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
-const Navbar = tw.nav<{ $top: boolean }>`
+const Navbar = tw.nav<{ $transparent: boolean }>`
     font-headline
-    ${p => p.$top ? "bg-transparent" : "bg-gray-800 shadow-md"}
+    ${p => p.$transparent ? "bg-transparent" : "bg-gray-800 shadow-md"}
     p-2 
     mt-0
     w-full
@@ -34,7 +34,7 @@ export default function Navigation() {
 
   const [active, setActive] = useState(false);
   return (
-    <Navbar $top={onTop}>
+    <Navbar $transparent={onTop}>
       <Brand />
       <Burger active={active} onClick={() => setActive(!active)} />
       <Menu active={active} />

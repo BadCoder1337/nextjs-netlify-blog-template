@@ -8,6 +8,8 @@ import config from "../../lib/config";
 import { countPosts, listPostContent, PostContent } from "../../lib/posts";
 import { listTags, TagContent } from "../../lib/tags";
 import Head from "next/head";
+import React from "react";
+import ArtLayout from "../../components/ArtLayout";
 
 type Props = {
   posts: PostContent[];
@@ -19,14 +21,14 @@ type Props = {
 };
 export default function Index({ posts, tags, pagination }: Props) {
   const url = "/posts";
-  const title = "All posts";
+  const title = "Новости";
   return (
-    <Layout>
+    <ArtLayout header="Новости">
       <BasicMeta url={url} title={title} />
       <OpenGraphMeta url={url} title={title} />
       <TwitterCardMeta url={url} title={title} />
       <PostList posts={posts} tags={tags} pagination={pagination} />
-    </Layout>
+    </ArtLayout>
   );
 }
 
