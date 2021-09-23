@@ -28,14 +28,20 @@ export default function Index() {
       </ArtContainer>
       <div className="container">
         <div>
-          <h1>
-            Привет, мы Rainbow6-RUSSIA.
-          </h1>
-          <a href="https://vk.com/rainbow6_ru" className="handle">@rainbow6_ru</a>
-          <h2>Скоро все будет по-новому.</h2>
+          <h2 className="text-2xl">🚧 Скоро тут будет интересно. 🚧</h2>
           {/* <SocialList /> */}
         </div>
       </div>
+      <style jsx>{`
+          .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1 1 auto;
+            padding: 0 1.5rem;
+            height: 80vh;
+          }
+        `}</style>
     </Layout>
   );
 }
