@@ -9,7 +9,7 @@ const MenuContainer = tw.div<{ $active: boolean }>`
     w-full
     items-center
 
-    bg-gray-900 shadow-md
+    bg-gray-800 shadow-md
     rounded-lg
     lg:bg-transparent
     lg:shadow-none

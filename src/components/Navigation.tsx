@@ -7,7 +7,7 @@ import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 const Navbar = tw.nav<{ $top: boolean }>`
     font-headline
-    ${p => p.$top ? "bg-transparent" : "bg-gray-900 shadow-md"}
+    ${p => p.$top ? "bg-transparent" : "bg-gray-800 shadow-md"}
     p-2 
     mt-0
     w-full
