@@ -10,6 +10,8 @@ const ArtContainer = tw.div`
   flex
   items-center
   justify-center
+  pt-10
+  lg:pt-0
 `
 
 export default function Index() {
@@ -24,7 +26,7 @@ export default function Index() {
           <h2 className="text-2xl">Не просто Discord, а самое большое и уютное сообщество по Rainbow Six Siege</h2>
         </div>
       </ArtContainer>
-      <div className="container text-shadow-xl">
+      <div className="container">
         <div>
           <h1>
             Привет, мы Rainbow6-RUSSIA.

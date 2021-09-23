@@ -1,12 +1,18 @@
 import tw from "tailwind-styled-components"
 import Link from "next/link";
 import { NewspaperIcon, AtSymbolIcon, CurrencyDollarIcon, InformationCircleIcon } from '@heroicons/react/solid'
+import DiscordIcon from "../../public/images/discord.svg";
 
 const MenuContainer = tw.div<{ $active: boolean }>`
     ${p => p.$active ? "" : "hidden"}
     lg:flex
     w-full
     items-center
+
+    bg-gray-900 shadow-md
+    rounded-lg
+    lg:bg-transparent
+    lg:shadow-none
 `
 const MenuPart = tw.div`
     flex
@@ -53,7 +59,7 @@ export default function Menu({ active }: Props) {
             <Link href="/status"><MenuButton><InformationCircleIcon width={24} height={24} />Статус</MenuButton></Link>
         </MenuLeft>
         <MenuRight>
-            <MenuButton target="_blank" href="https://discord.gg/r6ru">Присоединиться</MenuButton>
+            <MenuButton target="_blank" href="https://discord.gg/r6ru"><DiscordIcon width={24} height={24} />Присоединиться</MenuButton>
         </MenuRight>
     </MenuContainer>
 }
