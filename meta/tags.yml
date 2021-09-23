@@ -1,13 +1,9 @@
 tags:
-  - slug: document
-    name: document
-  - slug: mock
-    name: mock
-  - slug: style
-    name: style
-  - slug: license
-    name: license
-  - slug: mdx
-    name: mdx
-  - slug: markdown
-    name: markdown
+    - slug: правила
+      name: правила
+    - slug: раздачи
+      name: раздачи
+    - slug: патч
+      name: патч
+    - slug: ивент
+      name: ивент
