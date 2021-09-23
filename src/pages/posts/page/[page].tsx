@@ -1,5 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
+import React from "react";
+import ArtLayout from "../../../components/ArtLayout";
 import Layout from "../../../components/Layout";
 import BasicMeta from "../../../components/meta/BasicMeta";
 import OpenGraphMeta from "../../../components/meta/OpenGraphMeta";
@@ -20,14 +22,14 @@ type Props = {
 };
 export default function Page({ posts, tags, pagination, page }: Props) {
   const url = `/posts/page/${page}`;
-  const title = "All posts";
+  const title = "Блог";
   return (
-    <Layout>
+    <ArtLayout header="Блог">
       <BasicMeta url={url} title={title} />
       <OpenGraphMeta url={url} title={title} />
       <TwitterCardMeta url={url} title={title} />
       <PostList posts={posts} tags={tags} pagination={pagination} />
-    </Layout>
+    </ArtLayout>
   );
 }
 

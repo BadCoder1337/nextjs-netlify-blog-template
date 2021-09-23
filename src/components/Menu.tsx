@@ -53,7 +53,7 @@ type Props = {
 export default function Menu({ active }: Props) {
     return <MenuContainer $active={active}>
         <MenuLeft>
-            <Link href="/posts"><MenuButton><NewspaperIcon width={24} height={24} />Новости</MenuButton></Link>
+            <Link href="/posts"><MenuButton><NewspaperIcon width={24} height={24} />Блог</MenuButton></Link>
             <Link href="/donate"><MenuButton><CurrencyDollarIcon width={24} height={24} />Поддержать нас</MenuButton></Link>
             <Link href="/contact"><MenuButton><AtSymbolIcon width={24} height={24} />Связаться</MenuButton></Link>
             <Link href="/status"><MenuButton><InformationCircleIcon width={24} height={24} />Статус</MenuButton></Link>

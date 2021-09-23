@@ -21,9 +21,9 @@ type Props = {
 };
 export default function Index({ posts, tags, pagination }: Props) {
   const url = "/posts";
-  const title = "Новости";
+  const title = "Блог";
   return (
-    <ArtLayout header="Новости">
+    <ArtLayout header="Блог">
       <BasicMeta url={url} title={title} />
       <OpenGraphMeta url={url} title={title} />
       <TwitterCardMeta url={url} title={title} />
