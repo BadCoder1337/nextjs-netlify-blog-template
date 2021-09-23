@@ -3,8 +3,7 @@ import tw from "tailwind-styled-components";
 import logo from "../../public/images/logo.png";
 
 const BrandContainer = tw.a`
-    py-2
-    px-4
+    p-2
     text-white
     no-underline
     hover:text-white

@@ -1,5 +1,3 @@
-
-import { useRouter } from "next/router";
 import Burger from "./Burger";
 import React, { useState } from "react";
 import tw from "tailwind-styled-components"
@@ -15,8 +13,11 @@ const Navbar = tw.nav<{ $top: boolean }>`
     w-full
     fixed
     flex
+    flex-wrap
+    lg:flex-nowrap
     transition
     text-shadow-xl
+    justify-between
 `
 
 export default function Navigation() {
@@ -34,8 +35,8 @@ export default function Navigation() {
   return (
     <Navbar $top={onTop}>
       <Brand />
-      <Menu />
       <Burger active={active} onClick={() => setActive(!active)} />
+      <Menu active={active} />
     </Navbar>
   );
 }
