@@ -1,24 +1,24 @@
-import Burger from "./Burger";
-import React, { useState } from "react";
+import Burger from "./Burger"
+import React, { useState } from "react"
 import tw from "tailwind-styled-components"
-import Brand from "./Brand";
-import Menu from './Menu';
-import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+import Brand from "./Brand"
+import Menu from "./Menu"
+import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 
 const Navbar = tw.nav<{ $transparent: boolean }>`
-    font-headline
-    ${p => p.$transparent ? "bg-transparent" : "bg-gray-700 shadow-md"}
-    p-2 
-    mt-0
-    w-full
-    fixed
-    flex
-    flex-wrap
-    lg:flex-nowrap
-    transition
-    text-shadow-xl
-    justify-between
-    z-50
+  ${p => (p.$transparent ? "bg-transparent" : "bg-gray-700 shadow-md")}
+  fixed
+  flex
+  flex-wrap
+  font-headline
+  justify-between
+  lg:flex-nowrap
+  mt-0
+  p-2 
+  text-shadow-xl
+  transition
+  w-full
+  z-50
 `
 
 export default function Navigation() {
@@ -32,12 +32,12 @@ export default function Navigation() {
     [onTop]
   )
 
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false)
   return (
     <Navbar $transparent={onTop}>
       <Brand />
       <Burger active={active} onClick={() => setActive(!active)} />
       <Menu active={active} />
     </Navbar>
-  );
+  )
 }

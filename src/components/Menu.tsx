@@ -1,10 +1,10 @@
+import { ChartBarIcon } from "@heroicons/react/solid"
+import Link from "next/link"
 import tw from "tailwind-styled-components"
-import Link from "next/link";
-import { NewspaperIcon, AtSymbolIcon, CurrencyDollarIcon, InformationCircleIcon } from '@heroicons/react/solid'
-import DiscordIcon from "../../public/images/discord.svg";
+import DiscordIcon from "../../public/images/discord.svg"
 
 const MenuContainer = tw.div<{ $active: boolean }>`
-    ${p => p.$active ? "" : "hidden"}
+    ${p => (p.$active ? "" : "hidden")}
     lg:flex
     w-full
     items-center
@@ -48,18 +48,32 @@ const MenuButton = tw.a`
 `
 
 type Props = {
-    active: boolean;
-};
+  active: boolean
+}
 export default function Menu({ active }: Props) {
-    return <MenuContainer $active={active}>
-        <MenuLeft>
-            <Link href="/posts"><MenuButton><NewspaperIcon width={24} height={24} />Блог</MenuButton></Link>
-            <Link href="/donate"><MenuButton><CurrencyDollarIcon width={24} height={24} />Поддержать нас</MenuButton></Link>
-            <Link href="/contact"><MenuButton><AtSymbolIcon width={24} height={24} />Связаться</MenuButton></Link>
-            <Link href="/status"><MenuButton><InformationCircleIcon width={24} height={24} />Статус</MenuButton></Link>
-        </MenuLeft>
-        <MenuRight>
-            <MenuButton target="_blank" href="https://discord.gg/r6ru"><DiscordIcon width={24} height={24} />Присоединиться</MenuButton>
-        </MenuRight>
+  return (
+    <MenuContainer $active={active} className="text-xl">
+      <MenuLeft>
+        <Link href="/posts">
+          <MenuButton
+            target="_blank"
+            href="https://tracker.rainbow6.ru"
+            className="font-bold"
+          >
+            <ChartBarIcon width={30} height={30} />
+            Трекер
+          </MenuButton>
+        </Link>
+        {/* <Link href="/donate"><MenuButton><CurrencyDollarIcon width={24} height={24} />Поддержать нас</MenuButton></Link>
+        <Link href="/contact"><MenuButton><AtSymbolIcon width={24} height={24} />Связаться</MenuButton></Link>
+        <Link href="/status"><MenuButton><InformationCircleIcon width={24} height={24} />Статус</MenuButton></Link> */}
+      </MenuLeft>
+      <MenuRight>
+        <MenuButton target="_blank" href="https://discord.gg/r6ru">
+          <DiscordIcon width={30} height={30} />
+          Присоединиться
+        </MenuButton>
+      </MenuRight>
     </MenuContainer>
+  )
 }
