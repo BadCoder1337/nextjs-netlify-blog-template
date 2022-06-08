@@ -1,24 +1,21 @@
 const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
-  purge: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: "media", // or 'media' or 'class'
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       fontFamily: {
-        "headline": ["Montserrat", "sans-serif"],
-        "main": ["Raleway", "sans-serif"]
-      }
+        headline: ["Montserrat", "sans-serif"],
+        main: ["Raleway", "sans-serif"],
+      },
     },
     screens: {
-      "xs": "475px",
+      xs: "475px",
       ...defaultTheme.screens,
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-    require('tailwindcss-textshadow')
-  ]
+  plugins: [require("tailwindcss-textshadow")],
 }
